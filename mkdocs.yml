@@ -5,7 +5,7 @@ site_url: https://jaredsplinter.github.io/ # must have the trailing slash
 site_author: Jared Splinter (jared.splinter@mail.mcgill.ca)
 site_description: Research site for Jared
 copyright: > # should remain a link to the original theme
-  &copy; 2023 Jared Splinter <br>
+  &copy; 2024 Jared Splinter <br>
   <a href="https://github.com/vuquangtrong/mkdocs-material-blog">Blog Theme</a> /
   <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a>
 
@@ -45,19 +45,19 @@ theme:
     - content.code.annotate 
     - content.code.copy
 
-extra_javascript:
+# extra_javascript:
   
-  # For rendering latex
-  - javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+#   # For rendering latex
+#   - javascripts/mathjax.js
+#   - https://polyfill.io/v3/polyfill.min.js?features=es6
+#   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 
 # For describing the navigation panel
 nav:
   - Home: index.md
   - About Me: about/index.md
-  - Research: reasearch/index.md
+  - Research: research/index.md
   - Projects: projects/index.md
 
 # Extensions that we want to use

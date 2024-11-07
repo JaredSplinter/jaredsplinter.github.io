@@ -1,4 +1,4 @@
-# Welcome to My Research Page
+# Welcome to My Research Page2
 
 
 ![Coma cluster](./media/Crab_Nebula.jpg "Crab Nebula"){align="left": style="height:150;width:150px"}
@@ -9,7 +9,7 @@ Through meticulous investigation, I aim to elucidate the fundamental processes s
 I extend a formal welcome to all who wish to engage with the frontiers of astrophysics through the lens of my ongoing research endeavors.
 
 
-If you're like to learn more about me, you can find an introduction to [my research](./reasearch/research_index.md), some info on some [recent projects](./projects/project_index.md) and some more info [about me](./about/about.md).
+If you're like to learn more about me, you can find an introduction to [my research](./research/research_index.md), some info on some [recent projects](./projects/project_index.md) and some more info [about me](./about/about.md).
 
 ## Here is an equation
 
@@ -19,3 +19,7 @@ $$ x = \frac{-b \pm \sqrt{b^2 -4ac}}{2a}$$
 
 [![Crab Nebula](./media/Crab_Nebula.jpg "Crab Nebula")](https://en.wikipedia.org/wiki/Crab_Nebula#)
 I got this image from [Wikipedia](https://en.wikipedia.org/wiki/Crab_Nebula).
+
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
