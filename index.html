@@ -1,172 +1,245 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
-        <title>Jared Splinter</title>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Jared Splinter</title>
+    <style>
+      /* load heading font */
+      @import url('https://fonts.googleapis.com/css2?family=Josefin Sans:wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=Josefin Sans:ital,wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=Josefin Sans:wght@700');
+      @import url('https://fonts.googleapis.com/css2?family=Josefin Sans:ital,wght@700');
 
-        <meta name="description" content="Personal Research website for Jared Splinter">
-        <link rel="canonical" href="https://jaredsplinter.github.io/">
-        <meta name="author" content="Jared Splinter (jared.splinter@mail.mcgill.ca)">
+      /* load body font */
+      @import url('https://fonts.googleapis.com/css2?family=Hind:wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=Hind:ital,wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=Hind:wght@700');
+      @import url('https://fonts.googleapis.com/css2?family=Hind:ital,wght@700');
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-            <link rel="stylesheet" href="assets/css/darcula-highlight.min.css">
+      /* load mono font */
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains Mono:wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains Mono:ital,wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains Mono:wght@700');
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains Mono:ital,wght@700');
 
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/dracula-ui.min.css">
-        <link rel="stylesheet" href="assets/css/mkdocs.min.css">
-
+      /* load emoji font */
+      @font-face {
+        font-family: "Noto Color Emoji";
+        src: url('assets/fonts/emoji/NotoColorEmoji-Regular.ttf');
+        font-weight: 400;
+      }
+  
+      :root {
+        /* colors */
+        --primary: #d9a35d;
+        --secondary: #4862a6;
+        --tertiary: #b75034;
+        /* shades */
+        --base: #ffffff;
+        --mantle: #f2f2f2;
+        --crust: #d2d2d2;
+        --overlay: #b2b2b2;
+        --footer: #000000cc;
+        /* text */
+        --text: #161616;
+        --hltext: #f2f2f2;
+        color: var(--text);
+        /* background-specific text */
+        --primary-text: var(--hltext);
+        --secondary-text: var(--hltext);
+        --tertiary-text: var(--hltext);
+        --base-text: var(--text);
+        --mantle-text: var(--text);
+        --crust-text: var(--text);
+        --overlay-text: var(--hltext);
+        --footer-text: var(--hltext);
+        /* fonts */
+        --heading: Josefin Sans, Noto Color Emoji;
+        --body: Hind, Noto Color Emoji;
+        --mono: JetBrains Mono, Noto Color Emoji;
+        font-family: var(--body); 
+      }
+      /* dark mode */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          /* colors */
+          --primary: #d9a35d;
+          --secondary: #46B1C9;
+          --tertiary: #D4ADCF;
+          /* shades */
+          --base: #212530;
+          --mantle: #111318;
+          --crust: #050608;
+          --overlay: #000000;
+          --footer: #00000022;
+          /* text */
+          --text: #f2f2f2;
+          --hltext: #161616;
+          color: var(--text);
+          /* background-specific text */
+          --primary-text: var(--text);
+          --secondary-text: var(--text);
+          --tertiary-text: var(--text);
+          --base-text: var(--text);
+          --mantle-text: var(--text);
+          --crust-text: var(--text);
+          --overlay-text: var(--hltext);
+          --footer-text: var(--text);
+        }
+      }
+      /* style settings */
+      header#header {
+        grid-template-columns: 20rem auto 20rem;
+      }
+      body#background {
+        background: fixed center/cover var(--base);
         
-            <link  rel="icon" type="image/x-icon" href="images/planet_icon.png">
         
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-                <script>hljs.initHighlightingOnLoad();</script>
-
-</head>
-
-<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
-
-    <main class="d-flex">
-
-        <!-- block sidebar -->
-            <nav id="sidebar" class="sidebar drac-bg-black">
-    <div class="custom-menu">
-        <button type="button" id="sidebarCollapse" class="btn btn-primary">
-            <i class="fa fa-bars"></i>
-            <span class="sr-only">Menu</span>
-        </button>
-    </div>
-
-    <div class="p-4">
+      }
+      #background-gradient {
+        background: linear-gradient(
+          45deg, 
+          color-mix(in srgb, var(--mantle) 80%, transparent), transparent, color-mix(in srgb, var(--crust) 20%, transparent)
+        );
+      }
+      content#content {
+        padding: 0 3rem;
+        background: color-mix(in srgb, var(--base) 0%, transparent);
+        border-left: 1px solid var(--primary);
+        border-right: none;
+      }
+      #avatar {
         
-            <img class="logo" src="images/Jared2.jpeg" height="150px">
+        border-radius: 50%;
         
+      }
+      footer#footer a {
+        color: #46B1C9;
+      }
+      footer#footer a:hover {
+        color: #D4ADCF;
+      }
+    </style>
+    <link rel="icon" type="image/x-icon" href=images/planet_icon.png>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsivity.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">  
+    <script src="javascripts/mathjax.js"></script>  
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>  
+    <script src="search/main.js"></script>
+    <script src="https://kit.fontawesome.com/b57355f8ac.js" crossorigin="anonymous"></script>
+    <script id="altmetric-embed-js" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/altmetric_badges-e7ba41a192efc3e63f5d48f8a1916dec4b1b49c01075bc7b39481408957b3b28.js"></script>
+    <link id="altmetric-embed-css" rel="stylesheet" type="text/css" href="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed-59614f5c46b49b21eeef3bb28c4fb38d1e7069e8d014752fcb66e84942556802.css">
+  </head>
 
-        <div class="drac-text-center">
+<body id="background">
+  <div id="background-gradient"></div>
+  <content id="content">
+  
+  <header id="header">
+    
+    
+     
+    <h1 id="title"><a href=.>Jared Splinter</a></h1>
+
+    
+    
+    
+     
+    
+    <img id="avatar" src="images/Jared2.jpeg" />
+    
+
+    
+    
+    
+     
+    <ul id="socials">
+        
+        
+        
+        
+        
+        <li>
+            <a href="mailto:jared.splinter@mail.mcgill.ca"><i class="fa-regular fa-at" alt="Email"></i></a>
+            <div class="social-label">Email</div>
+        </li>
+        
+        
+        
+        
+        
+        <li>
+            <a href="https://github.com/JaredSplinter"><i class="fa-brands fa-github" alt="GitHub"></i></a>
+            <div class="social-label">GitHub</div>
+        </li>
+        
+        
+        
+        
+        
+        <li>
+            <a href="https://orcid.org/0000-0001-9987-467X"><i class="fa-brands fa-orcid" alt="ORCiD"></i></a>
+            <div class="social-label">ORCiD</div>
+        </li>
+        
+        
+        
+        
+        
+        <li>
+            <a href="https://www.linkedin.com/in/jared-splinter-194565337/"><i class="fa-brands fa-linkedin" alt="LinkedIn"></i></a>
+            <div class="social-label">LinkedIn</div>
+        </li>
+        
+    </ul>
+
+    
+    
+    
+     
+    <nav class="horizontal" id="site-nav">
+        <ul>
             
-                <span class="drac-text drac-line-height drac-text-white">Jared Splinter</span>
             
-        </div>
-
-        <div class="drac-box flex-column">
-            <ul class="dot-ul">
-                <li><div class="dot-li drac-bg-cyan"></div></li>
-                <li><div class="dot-li drac-bg-green"></div></li>
-                <li><div class="dot-li drac-bg-orange"></div></li>
-                <li><div class="dot-li drac-bg-pink"></div></li>
-                <li><div class="dot-li drac-bg-purple"></div></li>
-                <li><div class="dot-li drac-bg-red"></div></li>
-                <li><div class="dot-li drac-bg-yellow"></div></li>
-            </ul>
-        </div>
-
-        <hr class="drac-divider" />
-
-        <!-- block menu -->
-        <ul class="mb-5 drac-list drac-list-none">
+            <li class="nav-item"><a class="current" href=".">Home</a></li>
             
-            <li class="drac-box">
-                <a href="."
-                    class=" active 
-                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    Home
-                </a>
-            </li>
-            <li class="drac-box">
-                <a href="about/"
-                    class="
-                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    About Me
-                </a>
-            </li>
-            <li class="drac-box">
-                <a href="research/"
-                    class="
-                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    Research
-                </a>
-            </li>
-            <li class="drac-box">
-                <a href="CV/"
-                    class="
-                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    CV
-                </a>
-            </li>
+            
+            
+            <li class="nav-item"><a class="" href="about/">About Me</a></li>
+            
+            
+            
+            <li class="nav-item"><a class="" href="research/">Research</a></li>
+            
+            
+            
+            <li class="nav-item"><a class="" href="CV/">CV</a></li>
+            
+            
         </ul>
-        <!-- endblock -->
-    </div>
-</nav>
-        <!-- endblock -->
-
-        <nav class="divider drac-bg-purple-cyan"></nav>
-
-        <div class="content">
-            <!-- block header -->
-                <header>
-    <nav class="navbar navbar-expand-xl drac-bg-purple">
-        <div class="container-fluid">
-            
-            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
-                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
-                <ul class="navbar-nav text-md-center">
-
-                    <!-- block preview -->
-                    <li class="nav-item">
-                            
-        <div class="container">
-            <div class="row row-preview">
-                <div class="col">
-                    <a 
-                        class="btn-preview drac-btn drac-text-white--hover disabled">
-                        <i class="fa fa-arrow-left"></i> Previous
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="about/"
-                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
-                        Next <i class="fa fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-                    </li>
-                    <!--  endblock -->
-
-                    <!-- block search -->
-                    <li class="nav-item"><div role="search" class="search-box">
-	<form id="rtd-search-form" class="wy-form" action="./search.html" method="get">
-		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
-		placeholder="Search docs" title="Type search term here" />
-	</form>
-</div>
-                    </li>
-                    <!--  endblock -->
-
-                    <!-- block source -->
-                    <li class="nav-item">
-                        
-                    </li>
-                    <!--  endblock -->
-
-                </ul>
-            </div>
-
-        </div>
     </nav>
-</header>
-            <!-- endblock -->
 
-            <!-- block content -->
-                <section class="p-md-5 section-content">
-    <article>
-        <p><h1 id="jared-splinter-hehim">Jared Splinter <em>(He/Him)</em></h1>
+    
+    
+</header>
+  
+  <main id="page">
+    <nav class="vertical" id="toc">
+
+<ul>
+
+<li class="nav-item">
+<a href="#home">Home</a>
+    
+</li>
+
+</ul>
+
+</nav>
+    <!-- # Jared Splinter *(He/Him)* -->
+<h1 id="home">Home</h1>
 <h3 id="phd-student">PhD Student</h3>
 <p><em>Trottier Space Institute, McGill University</em></p>
 <!-- ![Coma cluster](./media/Crab_Nebula.jpg "Crab Nebula"){align="left": style="height:150;width:150px"} -->
@@ -178,34 +251,43 @@
 <a href="https://exoplanetes.umontreal.ca/en/team-member/jared-splinter/"><img :=":" align="center" alt="IREx" src="media/irex-logo.png" style="height:150;width:300px" title="IREx" /></a></p>
 <script type="text/javascript"
   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script></p>
-    </article>
-</section>
-            <!-- endblock -->
+</script>
+    <nav id="page-controls">
+      <a href="#content" id="return-top">
+        <i class="fa fa-arrow-up" alt="⇧"></i> Return to top
+      </a>
+    </nav>
+  </main>
+  </content>
+  <footer id="footer">
+    
 
-            <!-- block footer -->
-                <footer>
-    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
-        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
-            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
-            Made with Dracula Theme for MkDocs
-        </a>
-    </div>
-</footer>
-            <!-- endblock -->
-        </div>
+<p>Compiled from markdown using <a href="https://www.mkdocs.org/">MkDocs</a>. Theme is <a href="https://teparsons.github.io/mkdocs-landing/">Landing</a> by <a href="https://toddparsons.co.uk">Todd Parsons</a>.</p>
 
-    </main>
 
-        <script>var base_url = '.';</script>
-        <script src="assets/js/jquery-3.3.1.slim.min.js"></script>
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/js/mkdocs.js"></script>
-			<script src="javascripts/mathjax.js" defer></script>
-			<script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
-			<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
-			<script src="search/main.js" defer></script>
 
+
+
+
+
+
+
+
+
+
+<a id=page-source href=https://github.com/TEParsons/toddparsons><i class="fa-brands fa-github"></i> Page source</a>
+
+
+
+<script src="javascripts/mathjax.js"></script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script src="search/main.js"></script>
+
+  </footer>
 </body>
 
 </html>
