@@ -35,3 +35,10 @@ h6 {
     display: none;
 } */
 
+.image-container {
+    background-color: #FFFFFF; /* Set a light background color for light mode */
+}
+
+.image-container img {
+    background-color: #FFFFFF; /* Add background to the image itself */
+}
