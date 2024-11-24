@@ -1,0 +1,38 @@
+/* Change the background color of the top bar */
+.md-header {
+    background-color: #2e3440; /* Replace with your desired color */
+}
+
+/* Customize the text color for navigation links */
+.md-nav__link {
+    color: #81a1c1; /* Replace with your desired color */
+}
+
+/* Adjust padding or spacing for the navigation bar */
+.md-header, .md-nav {
+    padding: 10px 20px;
+}
+
+/* Add hover effects for navigation links */
+.md-nav__link:hover {
+    color: #88c0d0; /* Replace with your desired hover color */
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-nav li {
+    margin-bottom: 10px;
+}
+
+.sidebar-nav a {
+    color: #333; /* Adjust color */
+    text-decoration: none;
+}
+
+.sidebar-nav a:hover {
+    text-decoration: underline;
+    color: #007BFF; /* Adjust hover color */
+}

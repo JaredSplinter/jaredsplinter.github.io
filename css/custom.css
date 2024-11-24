@@ -1,0 +1,37 @@
+
+/* Custom font sizes for headers */
+h1 {
+    font-size: 3.5em; /* Adjust size as needed */
+}
+
+h2 {
+    font-size: 2em; /* Adjust size as needed */
+}
+
+h3 {
+    font-size: 1.75em; /* Adjust size as needed */
+}
+
+/* You can adjust other headers similarly */
+h4 {
+    font-size: 1.5em;
+}
+
+h5 {
+    font-size: 1.25em;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+/* Increase the font size and padding of the "Home" button */
+#return-home {
+    font-size: 2em;  /* Make the text larger */
+}
+
+/* Hide the title on all pages by default */
+/* h1#title {
+    display: none;
+} */
+
